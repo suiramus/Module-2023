@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Countdown timer vanilla JS</title>
+	<link rel="stylesheet" href="style.css">
+	<!-- 
+		Countdown Timer in Vanilla Javascript | CSS SVG Circle Countdown Time Animation
+		https://youtu.be/8y4dFoE-nlU 
+	-->
+</head>
+<body>
+	
+	<div id="time">
+		
+		<!-- DAYS -->
+		<div class="circle" style="--clr:#00fe15;">
+			<div class="dots day_dot"></div>
+			<svg>
+				<circle cx="70" cy="70" r="70"></circle>
+				<circle cx="70" cy="70" r="70" id="dd"></circle>
+			</svg>
+			<div id="days">00<br><span>Days</span></div>
+		</div><!-- .circle -->
+		
+		<!-- HOURS -->
+		<div class="circle" style="--clr:#58d0ff;">
+			<div class="dots hr_dot"></div>
+			<svg>
+				<circle cx="70" cy="70" r="70"></circle>
+				<circle cx="70" cy="70" r="70" id="hh"></circle>
+			</svg>
+			<div id="hours">00<br><span>Hours</span></div>
+		</div><!-- .circle -->
+		
+		<!-- MINUTES -->
+		<div class="circle" style="--clr:#FC4040;">
+			<div class="dots min_dot"></div>
+			<svg>
+				<circle cx="70" cy="70" r="70"></circle>
+				<circle cx="70" cy="70" r="70" id="mm"></circle>
+			</svg>
+			<div id="minutes">00<br><span>Minutes</span></div>
+		</div><!-- .circle -->
+		
+		<!-- SECONDS -->
+		<div class="circle" style="--clr:#FCC200;">
+			<div class="dots sec_dot"></div>
+			<svg>
+				<circle cx="70" cy="70" r="70"></circle>
+				<circle cx="70" cy="70" r="70" id="ss"></circle>
+			</svg>
+			<div id="seconds">00<br><span>Seconds</span></div>
+		</div><!-- .circle -->
+		
+	</div><!-- #time -->
+	
+	<h2 class="newYear">2024<br><span>Happy New Year</span></h2>
+	
+<script>
+	// Countdown Timer
+	
+	let days = document.getElementById('days');
+	let hours = document.getElementById('hours');
+	let minutes = document.getElementById('minutes');
+	let seconds = document.getElementById('seconds');
+	
+	let dd = document.getElementById('dd');
+	let hh = document.getElementById('hh');
+	let mm = document.getElementById('mm');
+	let ss = document.getElementById('ss'); 
+	
+	let day_dot = document.querySelector('.day_dot');
+	let hr_dot = document.querySelector('.hr_dot');
+	let min_dot = document.querySelector('.min_dot');
+	let sec_dot = document.querySelector('.sec_dot');
+	
+	// let endDate = '01/01/2024 00:00:00';
+	let endDate = '15 Apr 2023 00:00:00';
+	// date format mm/dd/yy
+	
+	let x = setInterval(function(){
+		let now = new Date(endDate).getTime();
+		let countDown = new Date().getTime();
+		let distance = now - countDown;
+		
+		// time calculation for days, hours, min and seconds
+		
+		let d = Math.floor( distance / (1000 * 60 * 60 * 24));
+		let h = Math.floor(( distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		let m = Math.floor(( distance % (1000 * 60 * 60)) / (1000 * 60));
+		let s = Math.floor(( distance % (1000 * 60)) / (1000));
+		
+		// output results in elements with id
+		days.innerHTML = d + "<br><span>Zile</span>";
+		hours.innerHTML = h + "<br><span>Ore</span>";
+		minutes.innerHTML = m + "<br><span>Min</span>";
+		seconds.innerHTML = s + "<br><span>Sec</span>";
+		
+		// animate stroke
+		dd.style.strokeDashoffset = 440 - (440 * d) / 365; // 365 zile
+		hh.style.strokeDashoffset = 440 - (440 * h) / 24; // 24 ore
+		mm.style.strokeDashoffset = 440 - (440 * m) / 60; // 60 min/ora
+		ss.style.strokeDashoffset = 440 - (440 * s) / 60; // 60 sec/minut
+		
+		// animate circle dot
+		day_dot.style.transform = `rotateZ(${d * 0.986}deg)`;
+		// 360deg / 365days = 0.986
+		hr_dot.style.transform = `rotateZ(${h * 15}deg)`;
+		// 360deg / 24hours = 15
+		min_dot.style.transform = `rotateZ(${m * 6}deg)`;
+		// 360deg / 60min = 6
+		sec_dot.style.transform = `rotateZ(${s * 6}deg)`;
+		// 360deg / 60sec = 6
+		
+		// When the countdown is over, display a message
+		if(distance < 0){
+			clearInterval(x);
+			// Hide the countdown
+			document.getElementById('time').style.display = 'none';
+			// Display the message
+			document.querySelector('.newYear').style.display = 'block';
+		}
+	});
+	
+	
+</script>
+	
+</body>
+</html>
