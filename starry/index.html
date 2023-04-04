@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Starry Background</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+	<div class="body-overlay">
+		<div class="body-overlay-bg"></div>
+	</div>
+	
+	<header>
+		<h2>Starry Background</h2>
+	</header>
+	<section class="content">
+		<h1>Starry Background</h1>
+		<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum recusandae illo cupiditate quasi illum est, eius impedit distinctio labore quisquam!</p>
+		<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum recusandae illo cupiditate quasi illum est, eius impedit distinctio labore quisquam!</p>
+		<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum recusandae illo cupiditate quasi illum est, eius impedit distinctio labore quisquam!</p>
+		
+		<h3>Another heading</h3>
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos facilis commodi aspernatur consequatur fugiat provident quisquam facere illo iusto odio fuga optio temporibus voluptatibus voluptates et, tempora ab fugit ratione, repudiandae illum quasi. Itaque, saepe. Ratione est porro unde, sunt tenetur consectetur vitae repellendus nobis officiis quos molestiae animi voluptas?</p>
+	</section>
+	<footer>
+		<p>Starry Background 2023</p>
+	</footer>
+	
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		
+		var amount = 430;
+		var bodyOverlay = document.querySelector('.body-overlay-bg');
+		var i = 0;
+		
+		while (i < amount) {
+			var starry = document.createElement("span");
+			var posX = Math.floor(Math.random() * window.innerWidth);
+			var posY = Math.floor(Math.random() * window.innerHeight);
+			var rotation = Math.random() * 1000;
+			
+			// width & height
+			var width = getRandom(0.5, 3);
+			starry.style.width = width + 'px';
+			starry.style.height = width + 'px';
+			
+			// opacity
+			var opacity = getRandom(0.2, 1);
+			starry.style.opacity = opacity;
+			
+			// position
+			starry.style.left = posX +'px';
+			starry.style.top = posY +'px';
+			
+			// scale
+			var scale = Math.random() * 0.1;
+			// starry.style.transform = 'scale(' + scale + ')';
+			
+			// var delay = Math.random() * 5;
+			var delay = getRandom(1, 5);
+			starry.style.animationDelay = delay +'s';
+			
+			// append span's
+			bodyOverlay.appendChild(starry);
+			i++;
+		}
+	});
+	
+	function getRandom(min, max) {
+		return Math.random() * (max - min) + min;
+	}
+</script>
+	
+</body>
+</html>
