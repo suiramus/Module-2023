@@ -10,3 +10,6 @@ https://suiramus.github.io/module/countdown/
 
 ### Starry
 https://suiramus.github.io/module/starry/
+
+### Afisare mesaj pe o anumita perioada (JS)
+https://suiramus.github.io/module/afisare-mesaj/

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Afisare mesaj bazat pe timp</title>
+	<style>
+		#afisaj-mesaj {
+			background-color: #f7dc6f;
+			color: #333;
+			font-size: 16px;
+			text-align: center;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	<!-- <div id="afisaj-mesaj">Mesajul apare aici</div> -->
+	
+	<script>
+		function afisareMesajInterval(dataInceput, dataSfarsit, mesaj) {
+			// Setăm datele limită pentru afișare
+			const timpInceput = new Date(dataInceput).getTime();
+			const timpSfarsit = new Date(dataSfarsit).getTime();
+			
+			// Obținem elementul de afișare
+			const elementAfisaj = document.createElement('div');
+			elementAfisaj.setAttribute('id', 'afisaj-mesaj');
+			elementAfisaj.style.backgroundColor = '#f7dc6f';
+			elementAfisaj.style.color = '#333';
+			elementAfisaj.style.fontSize = '16px';
+			elementAfisaj.style.textAlign = 'center';
+			elementAfisaj.style.padding = '10px';
+			elementAfisaj.innerText = mesaj;
+			document.body.insertBefore(elementAfisaj, document.body.firstChild);
+			
+			// Funcția pentru a afișa sau ascunde mesajul
+			function actualizareAfisareMesaj() {
+				const timpCurent = new Date().getTime();
+				if (timpCurent < timpInceput || timpCurent > timpSfarsit) {
+					elementAfisaj.style.display = 'none';
+				} else {
+					elementAfisaj.style.display = 'block';
+				}
+			}
+			
+			// Apelăm funcția la încărcarea paginii și apoi o rechemăm la fiecare 5 secunde
+			actualizareAfisareMesaj();
+			setInterval(actualizareAfisareMesaj, 5000);
+		}
+		
+		// Apelam functia
+		// afisareMesajInterval(dataInceput, dataSfarsit, mesaj)
+		// afisareMesajInterval('2023-04-11T00:00:00', '2023-05-01T00:00:00', 'Acesta este un mesaj de test.');
+		afisareMesajInterval('11 Apr 2023', '2023-05-01T00:00:00', 'Acesta este un mesaj de test.');
+		
+	</script>
+</body>
+</html>
