@@ -13,3 +13,6 @@ https://suiramus.github.io/module/starry/
 
 ### Afisare mesaj pe o anumita perioada (JS)
 https://suiramus.github.io/module/afisare-mesaj/
+
+### Number animation (JS)
+https://suiramus.github.io/module/number-animation/
