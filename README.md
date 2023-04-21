@@ -16,3 +16,7 @@ https://suiramus.github.io/module/afisare-mesaj/
 
 ### Number animation (JS)
 https://suiramus.github.io/module/number-animation/
+
+### Modal (JS)
+https://suiramus.github.io/module/modal/
+
