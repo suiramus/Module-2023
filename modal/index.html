@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Modal</title>
+	<style>
+		.modal {
+			position: fixed;
+			width: 100vw;
+			height: 100vh;
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.3s ease;
+			top: 0;
+			left: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.modal.open {
+			visibility: visible;
+			opacity: 1;
+			transition-delay: 0s;
+		}
+		.modal-bg {
+			position: absolute;
+			background: rgba(34, 34, 34, .8);
+			width: 100%;
+			height: 100%;
+		}
+		.modal-container {
+			border-radius: 4px;
+			background: #fff;
+			position: relative;
+			padding: 30px;
+			max-width: 500px;
+			margin: 0 auto;
+		}
+		.modal-close {
+			position: absolute;
+			width: 24px;
+			height: 24px;
+			right: 15px;
+			top: 15px;
+			color: red;
+			background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAp0lEQVR4nO2VXQrDIBCEvURDe8TmPLIwC3Op+tDjpIT2oZQYd2xCXrJPgs58/oya0llqAbib2aDqzGyYtS3z0d0nAEWB2Nu8fLRjdSDJi7s/5oHu/gRwa5n/anLOV0mAFYhsrkDYax6B8F/zNQi3Mq8kpHy3e+IcWcm0ycxbAAQifPwWceFAey5j2DxV+mRIJIrshSg5pwrpuURUILs/17t/OGelhXoB8j9n+uNfVakAAAAASUVORK5CYII=");
+			border-radius: 4px;
+			cursor: pointer;
+			transform: scale(1,1);
+			transition: all .3s;
+		}
+		
+		.modal-close:hover {
+			transform: scale(1.2,1.2);
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="modal" id="modal-one">
+		<div class="modal-bg modal-exit"></div>
+		<div class="modal-container">
+			<h1>Amazing Modal</h1>
+			<h2>Pure Vanilla JavaScript</h2>
+			<!-- <span class="modal-close modal-exit"></span> -->
+		</div>
+	</div>
+	
+	<div class="modal" id="modal-two">
+		<div class="modal-bg modal-exit"></div>
+		<div class="modal-container">
+			<h1>Modal two</h1>
+			<h2>lorem10</h2>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum incidunt soluta velit esse doloremque in, quo minima unde voluptas odio.</p>
+			<!-- <span class="modal-close modal-exit"></span> -->
+		</div>
+	</div>
+	
+
+	<a data-modal="modal-one" href="">Open Modal</a> | 
+	<a data-modal="modal-two" href="">Modal Two</a>
+
+	
+	<script>
+		
+		// Selectează toate elementele cu clasa "modal-container"
+		var modalContainers = document.querySelectorAll('.modal-container');
+
+		// Creează elementul span și adaugă clasele "modal-close" și "modal-exit"
+		var modalClose = document.createElement('span');
+		modalClose.classList.add('modal-close', 'modal-exit');
+
+		// Adaugă textul "Închide" la elementul span
+		// var closeText = document.createTextNode('Închide');
+		// modalClose.appendChild(closeText);
+
+		// Iterează prin toate elementele cu clasa "modal-container"
+		modalContainers.forEach(function(modalContainer) {
+		// Adaugă elementul span la fiecare element cu clasa "modal-container"
+		modalContainer.appendChild(modalClose.cloneNode(true));
+		});
+		
+		const modals = document.querySelectorAll('[data-modal]');
+		
+		modals.forEach(function (trigger) {
+			trigger.addEventListener('click', function (event) {
+				event.preventDefault();
+				const modal = document.getElementById(trigger.dataset.modal);
+				modal.classList.add('open');
+				const exits = modal.querySelectorAll('.modal-exit');
+				exits.forEach(function (exit) {
+					exit.addEventListener('click', function (event) {
+						event.preventDefault();
+						modal.classList.remove('open');
+					});
+				});
+			});
+		});
+	</script>	
+	
+</body>
+</html>
