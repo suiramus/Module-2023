@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Number animation</title>
+	<style>
+		*, *::before, *::after {
+			box-sizing: border-box;
+		}
+		
+		.wrap {
+			max-width: 500px;
+			margin: 0 auto;
+		}
+		
+		.numbers {
+			display: flex;
+			gap: 40px;
+			flex-wrap: wrap;
+		}
+		
+		span + .animate-number,
+		.animate-number + span,
+		.animate-number {
+			font-size: 80px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="wrap">
+		<h1>Number animation</h1>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam tempora obcaecati laborum unde, tempore perspiciatis a, ab similique sit incidunt aspernatur ipsam molestias eveniet repellendus eius omnis, numquam aliquam ducimus quos. Necessitatibus nostrum rerum vero eveniet cumque repellat ullam minus sint deleniti placeat deserunt aspernatur perferendis, laborum autem rem exercitationem odio nesciunt! Consequuntur quo eveniet accusantium nostrum incidunt optio debitis dignissimos reprehenderit et sed. Cumque recusandae inventore fugit sapiente repudiandae ab molestias provident beatae animi temporibus. Numquam, ab cum quos minima officia est culpa quibusdam pariatur reprehenderit assumenda soluta deleniti eveniet adipisci blanditiis? Unde nulla, odio recusandae minima possimus alias aliquam temporibus tenetur suscipit debitis cupiditate, illo eveniet enim iure sed nam. Labore quasi modi, adipisci, provident blanditiis numquam, expedita enim doloremque cumque neque tempora eveniet veniam? Repudiandae, dolore ex. Consectetur impedit incidunt repudiandae molestias voluptatibus. Repellat dolorem tenetur voluptatum odit ipsum facilis et magni eius repellendus temporibus itaque nesciunt molestias dolor optio harum maiores, alias neque similique numquam molestiae libero sapiente accusantium vel eum! Quidem eos sint excepturi suscipit, dolores dolor quisquam repellat! Veritatis expedita, reprehenderit porro beatae quam corporis voluptas eaque obcaecati cum modi reiciendis voluptatibus, unde quidem doloremque culpa quaerat impedit optio possimus, voluptate minima molestias eligendi. Architecto, dolore illum! Nihil, iste sequi pariatur facilis modi suscipit ipsa eius vero natus eum ab exercitationem voluptates omnis accusamus veniam! Provident reprehenderit voluptatibus repellat! Ab reprehenderit autem reiciendis incidunt aperiam accusamus labore non, earum nulla vero nostrum ex veritatis velit rerum ratione maiores eligendi minima nobis saepe? Tempore, dignissimos placeat, mollitia quidem aspernatur labore ipsum iure culpa, provident obcaecati necessitatibus! Tenetur aliquid mollitia alias magni dolore eos dignissimos cumque eum repellendus neque, similique aut nesciunt voluptas sapiente repudiandae tempora, amet sit, ratione laborum assumenda! Sit harum, maxime enim dicta commodi velit error ipsum dolorum fugiat molestiae et, reiciendis consequatur?</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam tempora obcaecati laborum unde, tempore perspiciatis a, ab similique sit incidunt aspernatur ipsam molestias eveniet repellendus eius omnis, numquam aliquam ducimus quos. Necessitatibus nostrum rerum vero eveniet cumque repellat ullam minus sint deleniti placeat deserunt aspernatur perferendis, laborum autem rem exercitationem odio nesciunt! Consequuntur quo eveniet accusantium nostrum incidunt optio debitis dignissimos reprehenderit et sed. Cumque recusandae inventore fugit sapiente repudiandae ab molestias provident beatae animi temporibus. Numquam, ab cum quos minima officia est culpa quibusdam pariatur reprehenderit assumenda soluta deleniti eveniet adipisci blanditiis? Unde nulla, odio recusandae minima possimus alias aliquam temporibus tenetur suscipit debitis cupiditate, illo eveniet enim iure sed nam. Labore quasi modi, adipisci, provident blanditiis numquam, expedita enim doloremque cumque neque tempora eveniet veniam? Repudiandae, dolore ex. Consectetur impedit incidunt repudiandae molestias voluptatibus. Repellat dolorem tenetur voluptatum odit ipsum facilis et magni eius repellendus temporibus itaque nesciunt molestias dolor optio harum maiores, alias neque similique numquam molestiae libero sapiente accusantium vel eum! Quidem eos sint excepturi suscipit, dolores dolor quisquam repellat! Veritatis expedita, reprehenderit porro beatae quam corporis voluptas eaque obcaecati cum modi reiciendis voluptatibus, unde quidem doloremque culpa quaerat impedit optio possimus, voluptate minima molestias eligendi. <span class="animate-number" data-number="500" data-time="3000" data-delay="100"></span> Architecto, dolore illum! Nihil, iste sequi pariatur facilis modi suscipit ipsa eius vero natus eum ab exercitationem voluptates omnis accusamus veniam! Provident reprehenderit voluptatibus repellat! Ab reprehenderit autem reiciendis incidunt aperiam accusamus labore non, earum nulla vero nostrum ex veritatis velit rerum ratione maiores eligendi minima nobis saepe? Tempore, dignissimos placeat, mollitia quidem aspernatur labore ipsum iure culpa, provident obcaecati necessitatibus! Tenetur aliquid mollitia alias magni dolore eos dignissimos cumque eum repellendus neque, similique aut nesciunt voluptas sapiente repudiandae tempora, amet sit, ratione laborum assumenda! Sit harum, maxime enim dicta commodi velit error ipsum dolorum fugiat molestiae et, reiciendis consequatur?</p>
+		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum veritatis ducimus, libero mollitia sint eum error consequuntur blanditiis, ex quae, minus cupiditate molestiae quaerat ut neque culpa modi nisi sequi amet asperiores. Nemo unde, nesciunt illum culpa ea praesentium magnam excepturi magni iusto asperiores. Commodi sint numquam doloribus optio aut beatae ad aliquam exercitationem error quod? Eveniet facere magnam quia quibusdam rem ut possimus dolorem, cupiditate error illum natus deleniti alias vitae veniam quidem sit nulla aspernatur aut necessitatibus. Laudantium nihil cumque reiciendis ullam? Id ratione iusto deleniti molestiae odio velit obcaecati recusandae quod, impedit, sequi eligendi iste dolores? A?</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, obcaecati! Similique veritatis maiores fugiat voluptatibus enim doloremque labore hic beatae?</p>
+		<div class="numbers">
+			<div class="animate-number" data-number="12" data-time="3200"data-delay="500">0</div>
+			<div><span>+</span> <span class="animate-number" data-number="120" data-time="800"data-delay="0"></span></div>
+			<div class="animate-number" data-number="600" data-time="1200"data-delay="1000">0</div>
+			<div class="animate-number" data-number="1200" data-time="2400"data-delay="500">0</div>
+		</div>
+		<div>
+			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam suscipit rem dolore delectus soluta eligendi, voluptate voluptatibus unde laborum vitae, repudiandae voluptatum! Voluptate amet praesentium id eveniet dolor ut eaque laborum. Soluta ullam ipsum corrupti nobis ab, dolore qui nihil fugiat itaque earum dolorum repellendus modi ducimus minima odio amet!</p>
+		</div>
+		
+		<div class="animate-number" data-number="600" data-time="5600" data-delay="1000">0</div>
+		
+		
+	</div>
+	
+	<script>
+		function animateNumbersInView() {
+			const animateNumberElements = document.querySelectorAll('.animate-number');
+			
+			animateNumberElements.forEach((element) => {
+				const duration = parseInt(element.getAttribute('data-time'));
+				const end = parseInt(element.getAttribute('data-number'));
+				const start = 0;
+				const range = end - start;
+				const increment = end > start ? 1 : -1;
+				const stepTime = Math.abs(Math.floor(duration / range));
+				
+				let current = start;
+				let timer;
+				
+				const elementInView = () => {
+					const elementTop = element.getBoundingClientRect().top;
+					const delay = parseInt(element.getAttribute('data-delay'));
+					
+					if (elementTop < window.innerHeight) {
+						setTimeout(() => {
+							timer = setInterval(() => {
+								current += increment;
+								element.innerHTML = current;
+								if (current == end) {
+									clearInterval(timer);
+								}
+							}, stepTime);
+						}, delay);
+						
+						window.removeEventListener('scroll', elementInView);
+					}
+				};
+				
+				window.addEventListener('scroll', elementInView);
+			});
+		}
+		
+		animateNumbersInView();
+		
+		
+	</script>
+</body>
+</html>
