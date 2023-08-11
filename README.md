@@ -20,3 +20,5 @@ https://suiramus.github.io/module/number-animation/
 ### Modal (JS)
 https://suiramus.github.io/module/modal/
 
+### Modal OK 2023 (JS)
+https://suiramus.github.io/module/modal-ok/
