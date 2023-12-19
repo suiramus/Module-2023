@@ -10,6 +10,9 @@ https://suiramus.github.io/module/accordion-2023/
 ### Timeline
 https://suiramus.github.io/module/timeline/
 
+![Timeline 2023](/timeline/timeline.jpg)
+*Timeline 2023*
+
 ### Countdown
 https://suiramus.github.io/module/countdown/
 
