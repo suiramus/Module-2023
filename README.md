@@ -4,6 +4,9 @@
 ### Accordion 2023 HTML, CSS, JS
 https://suiramus.github.io/module/accordion-2023/
 
+![Accordion 2023](/accordion-2023/accordion-2023.jpg)
+*Accordion 2023*
+
 ### Timeline
 https://suiramus.github.io/module/timeline/
 
