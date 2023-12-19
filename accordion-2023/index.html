@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Accordion 2023</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- https://web.archive.org/web/20221117021714/https://www.hellobonsai.com/pricing -->
+	<!-- https://www.frontendpractice.com/projects/bonsai -->
+
+<div class="acc-section">
+	
+	<div class="acc-wrap">
+		<div class="acc-header">
+			<h2>Frequently Asked Questions</h2>
+			<p>A document (as on a website) that provides answers to a list of typical questions that users might ask regarding a particular subject</p>
+		</div><!-- .accordion-header -->
+		
+		<div class="acc-item">
+			<h3 class="acc-title">What is PHP?</h3>
+			<div class="acc-content">
+				<p>PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML.</p>
+			</div>
+		</div><!-- .acc-item -->
+		
+		<div class="acc-item">
+			<h3 class="acc-title">How about JavaScript?</h3>
+			<div class="acc-content">
+				<p>JavaScript is the Programming Language for the Web. JavaScript can update and change both HTML and CSS. JavaScript can calculate, manipulate and validate data.</p>
+			</div>
+		</div><!-- .acc-item -->
+		
+		<div class="acc-item">
+			<h3 class="acc-title">What is HTML? And what is used for?</h3>
+			<div class="acc-content">
+				<p>HTML is the standard markup language for creating Web pages.</p>
+				<ul>
+					<li>HTML stands for Hyper Text Markup Language</li>
+					<li>HTML is the standard markup language for creating Web pages</li>
+					<li>HTML describes the structure of a Web page</li>
+					<li>HTML consists of a series of elements</li>
+					<li>HTML elements tell the browser how to display the content</li>
+					<li>HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.</li>
+				</ul>
+			</div>
+		</div><!-- .acc-item -->
+		
+		<div class="acc-item">
+			<h3 class="acc-title">What Is CSS and How Does It Work?</h3>
+			<div class="acc-content">
+				<p><strong>CSS</strong> stands for <strong>Cascading Style Sheets</strong> language and is used to stylize elements written in a markup language such as HTML. It separates the content from the visual representation of the site. The relation between HTML and CSS is strongly tied together since HTML is the very foundation of a site and CSS is all of the aesthetics of an entire website.</p>
+				<p>CSS was developed by W3C (World Wide Web Consortium) in 1996 for a rather simple reason. HTML element was not designed to have tags that would help format the page. You were only supposed to write the markup for the web page.</p>
+			</div>
+		</div><!-- .acc-item -->
+		
+	</div><!-- .accordion-wrap -->
+</div><!-- .acc-section -->
+
+<script>
+	/* Accordion */
+	var acc = document.getElementsByClassName("acc-title");
+	var i;
+	for (i = 0; i < acc.length; i++) {
+		acc[i].onclick = function(){
+			this.classList.toggle("acc-active");
+			var panel = this.nextElementSibling;
+			panel.classList.toggle("acc-visible");
+			/* if (panel.style.display === "block") {
+				panel.style.display = "none";
+			} else {
+				panel.style.display = "block";
+			} */
+			
+		}
+	}
+</script>	
+	
+</body>
+</html>
