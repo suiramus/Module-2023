@@ -2,13 +2,15 @@
  HTML, CSS, JS Module
 
 ### Accordion 2023 HTML, CSS, JS
-https://suiramus.github.io/module/accordion-2023/
+Demo: https://suiramus.github.io/module/accordion-2023/
+
+Code: https://github.com/suiramus/module/tree/main/accordion-2023
 
 ![Accordion 2023](/accordion-2023/accordion-2023.jpg)
 *Accordion 2023*
 
 ### Timeline
-https://suiramus.github.io/module/timeline/
+Demo: https://suiramus.github.io/module/timeline/
 
 Code: https://github.com/suiramus/module/tree/main/timeline
 
@@ -16,7 +18,9 @@ Code: https://github.com/suiramus/module/tree/main/timeline
 *Timeline 2023*
 
 ### Countdown
-https://suiramus.github.io/module/countdown/
+Demo: https://suiramus.github.io/module/countdown/
+
+Code: https://github.com/suiramus/module/tree/main/countdown
 
 ![Countdown 2023](/countdown/countdown.jpg)
 *Accordion 2023*
