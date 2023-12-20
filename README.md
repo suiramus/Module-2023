@@ -1,5 +1,12 @@
 # Module 2023
  HTML, CSS, JS Module
+ 
+### Price boxes
+Demo: https://suiramus.github.io/module/price-boxes/
+
+Code: https://github.com/suiramus/module/tree/main/price-boxes
+
+![Price boxes](/price-boxes/price-boxes.jpg)
 
 ### Accordion 2023 HTML, CSS, JS
 Demo: https://suiramus.github.io/module/accordion-2023/
