@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body{
+	font-family: "Montserrat", sans-serif;
+	color: #343434;
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 1.5;
+	background: #f8f9fa;
+}
+
+.muted {
+	color: #8d97ad;
+}
+
+.wrap {
+	max-width: 800px;
+	margin: 50px auto;
+	padding: 20px;
+}
+
+.section-header {
+	text-align: center;
+}
+
+h1, h2, h3, h4 {
+	color: #3e4555;
+	font-weight: 400;
+	line-height: 1.2;
+	margin: 0;
+}
+
+.section-header {
+	padding-bottom: 2px;
+}
+
+.price-boxes {
+	width: 100%;
+	margin: 30px auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.price-box {
+	width: calc(50% - 15px);
+	background: #FFF;
+	box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+	padding: 40px 30px;
+	border-radius: 4px;
+}
+
+@media only screen and (max-width: 680px) {
+	.price-boxes {
+		flex-direction: column;
+	}
+	
+	.price-box {
+		width: 100%;
+		max-width: 400px;
+		margin: 20px auto;
+	}
+}/* 680px */
+
+.price-box-head {
+	display: flex;
+	justify-content: space-between;
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.right-emf {
+	display: inline-block;
+	padding: 6px;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 1.1;
+	color: #FFF;
+	background: #ff4d7e;
+	border-radius: 3px;
+}
+
+.price-info {
+	text-align: center;
+}
+
+
+.price-number {
+	display: inline-block;
+	position: relative;
+	color: #333;
+	font-size: 58px;
+	line-height: 1;
+	margin: 30px 0 6px; 
+	font-weight: 300;
+}
+
+.price-number span {
+	display: inline-block;
+	font-size: 20px;
+	transform: translateY(-25px);
+	margin-right: 3px;
+}
+
+.price-time {
+	text-transform: uppercase;
+}
+
+a.price-button {
+	display: block;
+	padding: 20px;
+	margin: 30px 0 30px;
+	text-decoration: none;
+	font-size: 16px;
+	line-height: 1.1;
+	text-transform: uppercase;
+	text-align: center;
+	color: #FFF;
+	background: linear-gradient(to right, #188ef4 0%, #316ce8 100%);
+	border-radius: 6px;
+	transition: all .3s;
+}
+
+a.price-button:hover {
+	background: linear-gradient(to left, #c 0%, #316ce8 100%);
+}
+
+
+ul.price-list {
+	margin: 0;
+	padding: 0 0 0 20px;
+	list-style: none;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+ul.price-list li {
+	display: block;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24'%3E%3Cpath d='M12 21h0a9 9 0 0 1-9-9h0a9 9 0 0 1 9-9h0a9 9 0 0 1 9 9h0a9 9 0 0 1-9 9Zm-4-9.5 3 3 5-5' style='fill:none;stroke:%23188ef4;stroke-linecap:round;stroke-linejoin:round;stroke-width:.72'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	padding-left: 30px;
+	line-height: 20px;
+	margin: 20px 0 0;
+}
