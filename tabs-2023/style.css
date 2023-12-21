@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Titillium Web", Arial, sans-serif;
+	font-size: 17px;
+	line-height: 1.6;
+	color: 444;
+}
+
+.wrap {
+	max-width: 800px;
+	margin: 40px auto;
+	padding: 20px;
+}
+
+.tabs-wrap {
+	--bg-1: #F3F8FF;
+	--bg-2: #DDEBFF;
+	border: 1px solid var(--bg-2);
+}
+
+/* Style the tab */
+.tabs-links {
+	overflow: hidden;
+	display: flex;
+	background: var(--bg-2);
+	justify-content: center;
+}
+
+/* Style the buttons inside the tab */
+.tabs-links button {
+	background-color: var(--bg-2);
+	border: none;
+	border-right: 1px solid var(--bg-1);
+	outline: none;
+	cursor: pointer;
+	padding: 16px 20px;
+	transition: 0.3s;
+	font-size: 15px;
+	line-height: 1;
+	font-weight: bold;
+}
+
+.tabs-links button:first-of-type {
+	border-left: 1px solid var(--bg-1);
+}
+
+/* Change background color of buttons on hover */
+.tabs-links button:hover {
+	background-color: var(--bg-1);
+}
+
+/* Create an active/current tablink class */
+.tabs-links button.active {
+	background: var(--bg-1);
+}
+
+/* Style the tab content */
+.tabcontent {
+	display: none;
+	background: var(--bg-1);
+	padding: 20px;
+}
+
+/* Vertical tabs */
+
+/* .tabs-wrap {
+	display: flex;
+}
+
+.tabs-links {
+	flex-direction: column;
+	flex: 1;
+}
+
+.tabs-links button {
+	flex: 1;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.tabs-content {
+	flex: 3;
+}
+
+.tabcontent {
+	height: 100%;
+	flex: 1;
+	display: flex;
+	align-items: center;
+} */

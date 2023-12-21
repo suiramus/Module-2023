@@ -16,6 +16,13 @@ Code: https://github.com/suiramus/module/tree/main/accordion-2023
 ![Accordion 2023](/accordion-2023/accordion-2023.jpg)
 *Accordion 2023*
 
+### Tabs 2023
+Demo: https://suiramus.github.io/module/tabs-2023/
+
+Code: https://github.com/suiramus/module/tree/main/tabs-2023
+
+![Tabs 2023](/tabs-2023/tabs-2023.jpg)
+
 ### Timeline
 Demo: https://suiramus.github.io/module/timeline/
 

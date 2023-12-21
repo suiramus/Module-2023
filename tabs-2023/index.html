@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+	<div class="wrap">
+		
+		<div class="tabs-header" style="text-align: center; margin-bottom: 40px;">
+			<h2 style="margin-bottom: 10px;">Tabs: Horizontal</h2>
+			<p style="margin-top: 0px;">Just one Tabs per page</p>
+		</div><!-- .tabs-header -->
+		
+		<div class="tabs-wrap">
+			
+			<div class="tabs-links">
+				<button class="tablinks" onclick="openTab(event, 'tab1')" id="defaultOpen">PHP</button>
+				<button class="tablinks" onclick="openTab(event, 'tab2')">HTML</button>
+				<button class="tablinks" onclick="openTab(event, 'tab3')">CSS</button>
+				<button class="tablinks" onclick="openTab(event, 'tab4')">Javascript</button>
+			</div>
+			
+			<div class="tabs-content">
+				
+				<div id="tab1" class="tabcontent">
+					<h3>PHP</h3>
+					<p>PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML.</p>
+					<p>PHP code is usually processed on a web server by a PHP interpreter implemented as a module, a daemon or a Common Gateway Interface (CGI) executable. On a web server, the result of the interpreted and executed PHP code—which may be any type of data, such as generated HTML or binary image data—would form the whole or part of an HTTP response. Various web template systems, web content management systems, and web frameworks exist that can be employed to orchestrate or facilitate the generation of that response. Additionally, PHP can be used for many programming tasks outside the web context, such as standalone graphical applications[15] and robotic drone control.[16] PHP code can also be directly executed from the command line.</p>
+				</div>
+				
+				<div id="tab2" class="tabcontent">
+					<h3>HTML</h3>
+					<p>HTML is the standard markup language for creating Web pages.</p>
+					<ul>
+						<li>HTML stands for Hyper Text Markup Language</li>
+						<li>HTML is the standard markup language for creating Web pages</li>
+						<li>HTML describes the structure of a Web page</li>
+						<li>HTML consists of a series of elements</li>
+						<li>HTML elements tell the browser how to display the content</li>
+						<li>HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.</li>
+					</ul>
+				</div>
+				
+				<div id="tab3" class="tabcontent">
+					<h3>CSS</h3>
+					<p>CSS stands for Cascading Style Sheets language and is used to stylize elements written in a markup language such as HTML. It separates the content from the visual representation of the site. The relation between HTML and CSS is strongly tied together since HTML is the very foundation of a site and CSS is all of the aesthetics of an entire website.</p>
+					<p>CSS was developed by W3C (World Wide Web Consortium) in 1996 for a rather simple reason. HTML element was not designed to have tags that would help format the page. You were only supposed to write the markup for the web page.</p>
+				</div>
+				
+				<div id="tab4" class="tabcontent">
+					<h3>JavaScript</h3>
+					<p>JavaScript is the Programming Language for the Web. JavaScript can update and change both HTML and CSS. JavaScript can calculate, manipulate and validate data.</p>
+					<p>JavaScript (/ˈdʒɑːvəskrɪpt/), often abbreviated as JS, is a programming language and core technology of the World Wide Web, alongside HTML and CSS. As of 2023, 98.7% of websites use JavaScript on the client side for webpage behavior,[10] often incorporating third-party libraries. All major web browsers have a dedicated JavaScript engine to execute the code on users' devices.</p>
+				</div>
+				
+			</div><!-- .tabs-content -->
+			
+		</div><!-- .tabs-wrap -->
+		
+	</div><!-- .wrap -->
+	
+	<script src="script.js"></script>
+	
+</body>
+</html> 
