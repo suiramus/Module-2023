@@ -23,6 +23,16 @@ Code: https://github.com/suiramus/module/tree/main/tabs-2023
 
 ![Tabs 2023](/tabs-2023/tabs-2023.jpg)
 
+---
+
+### Tabs: multiple per page
+Demo: https://suiramus.github.io/module/tabs-multiple/
+
+Code: https://github.com/suiramus/module/tree/main/tabs-multiple
+
+![Tabs Multiple per page](/tabs-multiple/tabs-multiple.jpg)
+
+
 ### Timeline
 Demo: https://suiramus.github.io/module/timeline/
 
