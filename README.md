@@ -31,6 +31,16 @@ Code: https://github.com/suiramus/module/tree/main/tabs-2023
 
 ---
 
+### Tabs Optimized
+
+Demo: https://suiramus.github.io/module/tabs-optimized/
+
+Code: https://github.com/suiramus/module/tree/main/tabs-optimized
+
+![Tabs Optimized](/tabs-optimized/tabs-optimized.jpg)
+
+---
+
 ### Tabs: multiple per page
 Demo: https://suiramus.github.io/module/tabs-multiple/
 
