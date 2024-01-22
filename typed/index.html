@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Typed.js</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- 
+		Inspiration:
+		https://www.capitalfactory.com/
+		https://mattboldt.github.io/typed.js/
+	 -->
+	
+	<div class="header-wrap">
+		<div class="hero-content">
+			<h2 class="big-title">We love to code!</h2>
+			<div class="typed-wrap">
+				<div id="typed-strings" style="display:none;">
+					<p>In HTML and CSS</p>
+					<p>Server side PHP</p>
+					<p>Frontend Javascript</p>
+					<p>With Wordpress</p>
+				</div><!-- typed-strings -->
+				<span id="typed" style="white-space: pre;"></span>
+			</div><!-- .typed-wrap -->
+			<p class="after-text">Web designing is the process of planning, conceptualizing, and implementing the plan for designing a website in a way that is functional and offers a good user experience.</p>
+			
+			<a href="#" class="hero-button">Join Us</a>
+			<a href="#" class="hero-button bg-blue">Contact Us Now</a>
+		</div><!-- .hero-content -->
+	</div><!-- .header-wrap -->
+
+<script src="typed.js"></script>
+<script>
+	// https://mattboldt.github.io/typed.js/docs/
+	document.addEventListener('DOMContentLoaded', function(){
+		const typed = new Typed('#typed', {
+			stringsElement: '#typed-strings',
+			typeSpeed: 60,
+			backDelay: 1000,
+			// loop: true,
+			contentType: 'html',
+			loopCount: null,
+			smartBackspace: false,
+			// Cursor
+			showCursor: true,
+			cursorChar: '|',
+			cursorChar: '_',
+			autoInsertCss: true,
+		});
+	});
+	
+</script>
+	
+</body>
+</html>

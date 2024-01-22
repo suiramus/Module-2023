@@ -3,6 +3,15 @@
  
 ---
  
+### Typed.js
+Demo: https://suiramus.github.io/module/typed/
+
+Code: https://github.com/suiramus/module/tree/main/typed
+
+![Typed.js](/typed/typed.jpg)
+ 
+---
+ 
 ### Price boxes
 Demo: https://suiramus.github.io/module/price-boxes/
 
