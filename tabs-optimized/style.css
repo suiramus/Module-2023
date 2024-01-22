@@ -1,0 +1,76 @@
+/* styles.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+	--max-width: 900px;
+}
+
+html {overflow-y: scroll;}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Inter', sans-serif;
+	line-height: 1.6;
+}
+
+.wrap {
+	max-width: var(--max-width);
+	margin: 20px auto;
+	padding: 20px;
+}
+
+.tabs-wrap {
+	--color: #EC4899;
+	--bg: #fbf2fd;
+	max-width: var(--max-width);
+	margin: 40px auto 10px;
+	padding: 10px 20px;
+}
+
+.tab-links-group {
+	display: flex;
+	border-bottom: 1px solid var(--color);
+	background: var(--bg);
+}
+
+.tab-link {
+	color:#1e1e1e;
+	line-height: 1;
+	text-decoration: none;
+	padding: 14px 20px;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.tab-link:hover,
+.tab-link.active {
+	color: var(--bg);
+	background-color: var(--color);
+}
+
+.tab-contents-group {
+	
+}
+
+.tab-content {
+	padding: 10px 20px;
+	background: var(--bg);
+}
+
+.tab-content h3 {
+	margin: 10px 0;
+}
+
+.content-visible {
+	display: block;
+}
+
+.content-hidden {
+	display: none;
+}
+
+.tab-content {
+	transition: opacity 0.3s ease-in-out;
+}
+
