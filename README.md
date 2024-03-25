@@ -3,13 +3,21 @@
  
 ---
  
+### Filter Items
+Demo: https://suiramus.github.io/module/filter-items/
+
+Code: https://github.com/suiramus/module/tree/main/filter-items
+
+![Filter Items](/filter-items/filter-items.jpg)
+ 
+---
+
 ### Sticky Header & Scroll to section
 Demo: https://suiramus.github.io/module/sticky-header/
 
 Code: https://github.com/suiramus/module/tree/main/sticky-header
 
 ![Typed.js](/sticky-header/sticky-header.jpg)
- 
  
 ---
  
