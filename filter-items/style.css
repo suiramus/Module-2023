@@ -1,0 +1,52 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+	
+.wrap {
+	max-width: 800px;
+	margin: 30px auto;
+}
+	
+.filter-buttons {
+	margin-bottom: 30px;
+}
+	
+.filter-button {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.filter-button a {
+	padding: 5px 10px;
+	background-color: #d4d4d4;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	text-decoration: none;
+	color: #333;
+}
+.filter-button a.active {
+	background-color: #333;
+	color: #fff;
+}
+	
+.items {
+	display: flex;
+	flex-wrap: wrap;
+	margin-inline: -10px;
+}
+	
+.item {
+	display: none;
+	width: calc(33.333% - 22px);
+	max-width: calc(33.33% - 22px);
+	margin: 10px;
+	border: 1px solid green;
+	padding: 20px;
+	transition: all .3s;
+	opacity: 0;
+}
+
+.item.active {
+	display: block;
+	opacity: 1;
+}
