@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Video Background</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+	<div class="hero">
+		
+		<div class="hero-texture"></div>
+		
+		<video loop muted autoplay preload="auto">
+			<source src="video1.mp4" type="video/mp4">
+		</video>
+		
+		<div class="hero-content">
+			<h1>Our big website title goes here</h1>
+			<h2>Just a subtitle for hero section</h2>
+			<a href="#" class="hero-button">Call to action</a>
+		</div><!-- .hero-content -->
+		
+		<span id="playBtn" onclick="myFunction()">PAUSE</span>
+		
+	</div><!-- .hero -->
+	
+	<!-- Content after hero. For testing pourpouse -->
+	
+	<div class="test">
+		<h3>Suheading three</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, modi alias. Voluptate iusto velit fuga animi debitis rem magnam ducimus.</p>
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate perspiciatis animi quis molestiae atque labore deserunt corrupti saepe iste. Sequi, nostrum fugit quos delectus distinctio animi enim totam voluptatibus officiis aperiam necessitatibus assumenda blanditiis officia ad praesentium dicta. Consectetur accusantium suscipit obcaecati sint corrupti iure adipisci delectus vero. Animi vel, accusantium pariatur omnis libero dolor in autem numquam neque error quam nulla tempora nisi id perspiciatis aliquid quos. Laboriosam rem alias laudantium aliquid architecto minus eius voluptas, hic maiores nam! Quaerat ipsa maxime omnis illum dolorem incidunt corporis, eius magnam quos quibusdam excepturi eum numquam velit! Delectus alias esse maiores!</p>
+	</div>
+	
+	
+	<script>
+		
+		var video = document.querySelector('.hero video');
+		var videoBtn = document.getElementById("playBtn");
+	
+		function myFunction() {
+			if (video.paused) {
+				video.play();
+				videoBtn.innerHTML = "PAUSE";
+			} else {
+				video.pause();
+				videoBtn.innerHTML = "PLAY";
+			}
+		}
+		
+		video.playbackRate = 0.5;
+	</script>
+</body>
+</html>

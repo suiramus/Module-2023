@@ -12,6 +12,15 @@ Code: https://github.com/suiramus/module/tree/main/filter-items
  
 ---
 
+### Video Background for Hero Section
+Demo: https://suiramus.github.io/module/video-bg/
+
+Code: https://github.com/suiramus/module/tree/main/video-bg
+
+![Video Background](/video-bg/video-bg.jpg)
+ 
+---
+
 ### Sticky Header & Scroll to section
 Demo: https://suiramus.github.io/module/sticky-header/
 
