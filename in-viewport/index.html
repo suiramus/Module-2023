@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Scroll Animation Test</title>
+	<style>
+		.container {
+			max-width: 1024px;
+			margin: 30px auto;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+		.box {
+			width: calc(50% - 10px);
+			min-height: 400px;
+			background: lightgreen;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			opacity: .1;
+			margin-bottom: 20px;
+			transform: scale(0.71,0.71);
+			transition: all 1.2s ease;
+		}
+		.box.red {
+			background: red;
+		}
+		/* Exemplu de clasă CSS pentru animație */
+		.box.in-viewport {
+			/* Adăugați aici stiluri pentru animație */
+			transform: scale(1,1);
+			/* transition: all 1.5s ease; */
+			opacity: 1; /* Inițial, elementul este invizibil */
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<!-- Elemente care vor fi animate -->
+		<div class="box" data-viewport>Element 1</div>
+		<div class="box" data-viewport data-delay="500">Element 2</div>
+		<div class="box" data-viewport>Element 3</div>
+		<div class="box" data-viewport data-delay="500">Element 4</div>
+		<div class="box" data-viewport>Element 5</div>
+		<div class="box" data-viewport data-delay="500">Element 6</div>
+		<div class="box" data-viewport>Element 7</div>
+		<div class="box" data-viewport data-delay="500">Element 8</div>
+		<div class="box red" data-viewport>Element 9</div>
+		<div class="box red" data-viewport data-delay="500">Element 10</div>
+	</div>
+
+	<script>
+		function addClassOnIntersection(
+			targetSelector = '[data-viewport]', className = 'in-viewport', distanceFromBottom = 0, threshold = 0, removeClass = true) {
+			const options = {
+				root: null,
+				rootMargin: `0px 0px -${distanceFromBottom}px 0px`,
+				threshold: threshold
+			};
+
+			const observer = new IntersectionObserver(entries => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add(className);
+
+						// Verificăm dacă există atributul data-delay și aplicăm întârzierea animației
+						const delay = entry.target.getAttribute('data-delay');
+						if (delay) {
+							setTimeout(() => {
+								entry.target.style.transitionDelay = `${delay}ms`;
+							}, 0); // Folosim setTimeout pentru a forța aplicarea după ce clasa este adăugată
+						}
+					} else if (removeClass) {
+						entry.target.classList.remove(className);
+						// Resetăm întârzierea animației când elementul iese din viewport
+						entry.target.style.transitionDelay = '';
+					}
+				});
+			}, options);
+
+			const targets = document.querySelectorAll(targetSelector);
+			targets.forEach(target => {
+				observer.observe(target);
+			});
+		}
+
+		// Exemplu de utilizare:
+		addClassOnIntersection('[data-viewport]', 'in-viewport', 100, 0.5, true);
+	</script>
+</body>
+</html>

@@ -12,6 +12,15 @@ Code: https://github.com/suiramus/module/tree/main/filter-items
  
 ---
 
+### In viewport. Add class when element is in viewport
+Demo: https://suiramus.github.io/module/in-viewport/
+
+Code: https://github.com/suiramus/module/tree/main/in-viewport
+
+![Video Background](/in-viewport/in-viewport.jpg)
+ 
+---
+
 ### Video Background for Hero Section
 Demo: https://suiramus.github.io/module/video-bg/
 
