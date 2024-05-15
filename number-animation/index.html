@@ -6,93 +6,169 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Number animation</title>
 	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+		
 		*, *::before, *::after {
 			box-sizing: border-box;
+			font-family: 'Roboto', sans-serif;
 		}
 		
 		.wrap {
-			max-width: 500px;
-			margin: 0 auto;
+			max-width: 900px;
+			min-height: 100vh;
+			margin-inline: auto;
+			padding: 20px;
 		}
 		
-		.numbers {
+		h1 {
+			text-align: center;
+			margin:40px 0;
+			font-size: 70px;
+			font-weight: 900;
+		}
+		
+		.numbers-info {
 			display: flex;
-			gap: 40px;
+			justify-content: space-around;
+			flex-wrap: wrap;
+			margin-inline: -10px;
+		}
+		
+		.number-info {
+			width: 33.33%;
+			padding: 10px;
+			display: flex;
+			justify-content: center;
 			flex-wrap: wrap;
 		}
 		
-		span + .animate-number,
-		.animate-number + span,
-		.animate-number {
-			font-size: 80px;
-			font-weight: bold;
+		.number-info-icon {
+			display: flex;
+			width: 100%;
+			justify-content: center;
+			margin-bottom: 20px;
 		}
+		
+		.number-info-icon svg {
+			width: 80px;
+		}
+
+		.number-info-animate {
+			font-size: 80px;
+			line-height: 1;
+			font-weight: 900;
+			letter-spacing: -2px;
+			margin-bottom: 20px;
+		}
+		
+		.number-info-before,
+		.number-info-after {
+			font-size: 50px;
+			line-height: 80px;
+			font-weight: 400;
+		}
+		
+		.number-info-before {margin-right: 10px;}
+		.number-info-after {margin-left: 10px;}
+		
+		.number-info-text {
+			display: block;
+			width: 100%;
+			text-align: center;
+			font-size: 20px;
+			font-weight: 500;
+		}
+		
 	</style>
 </head>
 <body>
 	
 	<div class="wrap">
-		<h1>Number animation</h1>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam tempora obcaecati laborum unde, tempore perspiciatis a, ab similique sit incidunt aspernatur ipsam molestias eveniet repellendus eius omnis, numquam aliquam ducimus quos. Necessitatibus nostrum rerum vero eveniet cumque repellat ullam minus sint deleniti placeat deserunt aspernatur perferendis, laborum autem rem exercitationem odio nesciunt! Consequuntur quo eveniet accusantium nostrum incidunt optio debitis dignissimos reprehenderit et sed. Cumque recusandae inventore fugit sapiente repudiandae ab molestias provident beatae animi temporibus. Numquam, ab cum quos minima officia est culpa quibusdam pariatur reprehenderit assumenda soluta deleniti eveniet adipisci blanditiis? Unde nulla, odio recusandae minima possimus alias aliquam temporibus tenetur suscipit debitis cupiditate, illo eveniet enim iure sed nam. Labore quasi modi, adipisci, provident blanditiis numquam, expedita enim doloremque cumque neque tempora eveniet veniam? Repudiandae, dolore ex. Consectetur impedit incidunt repudiandae molestias voluptatibus. Repellat dolorem tenetur voluptatum odit ipsum facilis et magni eius repellendus temporibus itaque nesciunt molestias dolor optio harum maiores, alias neque similique numquam molestiae libero sapiente accusantium vel eum! Quidem eos sint excepturi suscipit, dolores dolor quisquam repellat! Veritatis expedita, reprehenderit porro beatae quam corporis voluptas eaque obcaecati cum modi reiciendis voluptatibus, unde quidem doloremque culpa quaerat impedit optio possimus, voluptate minima molestias eligendi. Architecto, dolore illum! Nihil, iste sequi pariatur facilis modi suscipit ipsa eius vero natus eum ab exercitationem voluptates omnis accusamus veniam! Provident reprehenderit voluptatibus repellat! Ab reprehenderit autem reiciendis incidunt aperiam accusamus labore non, earum nulla vero nostrum ex veritatis velit rerum ratione maiores eligendi minima nobis saepe? Tempore, dignissimos placeat, mollitia quidem aspernatur labore ipsum iure culpa, provident obcaecati necessitatibus! Tenetur aliquid mollitia alias magni dolore eos dignissimos cumque eum repellendus neque, similique aut nesciunt voluptas sapiente repudiandae tempora, amet sit, ratione laborum assumenda! Sit harum, maxime enim dicta commodi velit error ipsum dolorum fugiat molestiae et, reiciendis consequatur?</p>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam tempora obcaecati laborum unde, tempore perspiciatis a, ab similique sit incidunt aspernatur ipsam molestias eveniet repellendus eius omnis, numquam aliquam ducimus quos. Necessitatibus nostrum rerum vero eveniet cumque repellat ullam minus sint deleniti placeat deserunt aspernatur perferendis, laborum autem rem exercitationem odio nesciunt! Consequuntur quo eveniet accusantium nostrum incidunt optio debitis dignissimos reprehenderit et sed. Cumque recusandae inventore fugit sapiente repudiandae ab molestias provident beatae animi temporibus. Numquam, ab cum quos minima officia est culpa quibusdam pariatur reprehenderit assumenda soluta deleniti eveniet adipisci blanditiis? Unde nulla, odio recusandae minima possimus alias aliquam temporibus tenetur suscipit debitis cupiditate, illo eveniet enim iure sed nam. Labore quasi modi, adipisci, provident blanditiis numquam, expedita enim doloremque cumque neque tempora eveniet veniam? Repudiandae, dolore ex. Consectetur impedit incidunt repudiandae molestias voluptatibus. Repellat dolorem tenetur voluptatum odit ipsum facilis et magni eius repellendus temporibus itaque nesciunt molestias dolor optio harum maiores, alias neque similique numquam molestiae libero sapiente accusantium vel eum! Quidem eos sint excepturi suscipit, dolores dolor quisquam repellat! Veritatis expedita, reprehenderit porro beatae quam corporis voluptas eaque obcaecati cum modi reiciendis voluptatibus, unde quidem doloremque culpa quaerat impedit optio possimus, voluptate minima molestias eligendi. <span class="animate-number" data-number="500" data-time="3000" data-delay="100"></span> Architecto, dolore illum! Nihil, iste sequi pariatur facilis modi suscipit ipsa eius vero natus eum ab exercitationem voluptates omnis accusamus veniam! Provident reprehenderit voluptatibus repellat! Ab reprehenderit autem reiciendis incidunt aperiam accusamus labore non, earum nulla vero nostrum ex veritatis velit rerum ratione maiores eligendi minima nobis saepe? Tempore, dignissimos placeat, mollitia quidem aspernatur labore ipsum iure culpa, provident obcaecati necessitatibus! Tenetur aliquid mollitia alias magni dolore eos dignissimos cumque eum repellendus neque, similique aut nesciunt voluptas sapiente repudiandae tempora, amet sit, ratione laborum assumenda! Sit harum, maxime enim dicta commodi velit error ipsum dolorum fugiat molestiae et, reiciendis consequatur?</p>
-		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum veritatis ducimus, libero mollitia sint eum error consequuntur blanditiis, ex quae, minus cupiditate molestiae quaerat ut neque culpa modi nisi sequi amet asperiores. Nemo unde, nesciunt illum culpa ea praesentium magnam excepturi magni iusto asperiores. Commodi sint numquam doloribus optio aut beatae ad aliquam exercitationem error quod? Eveniet facere magnam quia quibusdam rem ut possimus dolorem, cupiditate error illum natus deleniti alias vitae veniam quidem sit nulla aspernatur aut necessitatibus. Laudantium nihil cumque reiciendis ullam? Id ratione iusto deleniti molestiae odio velit obcaecati recusandae quod, impedit, sequi eligendi iste dolores? A?</p>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, obcaecati! Similique veritatis maiores fugiat voluptatibus enim doloremque labore hic beatae?</p>
-		<div class="numbers">
-			<div class="animate-number" data-number="12" data-time="3200"data-delay="500">0</div>
-			<div><span>+</span> <span class="animate-number" data-number="120" data-time="800"data-delay="0"></span></div>
-			<div class="animate-number" data-number="600" data-time="1200"data-delay="1000">0</div>
-			<div class="animate-number" data-number="1200" data-time="2400"data-delay="500">0</div>
-		</div>
-		<div>
-			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam suscipit rem dolore delectus soluta eligendi, voluptate voluptatibus unde laborum vitae, repudiandae voluptatum! Voluptate amet praesentium id eveniet dolor ut eaque laborum. Soluta ullam ipsum corrupti nobis ab, dolore qui nihil fugiat itaque earum dolorum repellendus modi ducimus minima odio amet!</p>
-		</div>
-		
-		<div class="animate-number" data-number="600" data-time="5600" data-delay="1000">0</div>
-		
-		
-	</div>
+		<h1>Numbers animation</h1>
+		<div class="numbers-info">
+			<div class="number-info">
+				<div class="number-info-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M9.1 9.25L4.05 6.425L12 2l7.95 4.425L14.9 9.25q-.575-.6-1.325-.925T12 8t-1.575.325T9.1 9.25m1.9 12.2L3 17V8.125L8.125 11q-.075.25-.1.488T8 12q0 1.375.825 2.45T11 15.875zM12 14q-.825 0-1.412-.587T10 12t.588-1.412T12 10t1.413.588T14 12t-.587 1.413T12 14m1 7.45v-5.575q1.35-.35 2.175-1.425T16 12q0-.275-.025-.513t-.1-.487L21 8.125V17z"/></svg></div>
+				<span class="number-info-before">&plus;</span>
+				<div class="number-info-animate" data-number="120" data-time="1500"data-delay="0">0</div>
+				<span class="number-info-after"></span>
+				<span class="number-info-text">Happy Customers</span>
+			</div><!-- .number-info -->
+			<div class="number-info">
+				<div class="number-info-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M7 11h3q.425 0 .713-.288T11 10t-.288-.712T10 9H7q-.425 0-.712.288T6 10t.288.713T7 11m-3 9q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h17.025q.275 0 .45.15t.175.4q0 .275-.187.438t-.438.112q-.2-.05-.462-.075T20 5q-2.075 0-3.537 1.463T15 10q0 .55.1 1.05t.3.95H14q-1.25 0-2.125.875T11 15v1q-.7.5-1.175 1.213t-.675 1.562q-.125.5-.5.863T7.775 20zm10 1q.425 0 .713-.288T15 20t-.288-.712T14 19t-.712.288T13 20t.288.713T14 21m6-10q.425 0 .713-.288T21 10t-.288-.712T20 9t-.712.288T19 10t.288.713T20 11m-6 12q-1.25 0-2.125-.875T11 20q0-.975.563-1.75T13 17.175V15q0-.425.288-.712T14 14h5v-1.175q-.875-.3-1.437-1.075T17 10q0-1.25.875-2.125T20 7t2.125.875T23 10q0 .975-.562 1.75T21 12.825V15q0 .425-.288.713T20 16h-5v1.175q.875.3 1.438 1.075T17 20q0 1.25-.875 2.125T14 23m-4-8q.425 0 .713-.288T11 14t-.288-.712T10 13H7q-.425 0-.712.288T6 14t.288.713T7 15z"/></svg></div>
+				<span class="number-info-before">-</span>
+				<div class="number-info-animate" data-number="20" data-time="1000"data-delay="1000">0</div>
+				<span class="number-info-after">%</span>
+				<span class="number-info-text">Returned products</span>
+			</div><!-- .number-info -->
+			<div class="number-info">
+				<div class="number-info-icon">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M19 4h-4.18a2.988 2.988 0 0 0-5.64 0H5a2.006 2.006 0 0 0-2 2v14a2.006 2.006 0 0 0 2 2h14a2.006 2.006 0 0 0 2-2V6a2.006 2.006 0 0 0-2-2m-7 0a1 1 0 1 1-1 1a1.003 1.003 0 0 1 1-1m-2 5l2.79 2.794l2.52-2.52L14 8h4v4l-1.276-1.311l-3.932 3.935L10 11.83l-2.586 2.584L6 13Zm9 10H5v-2h14Z"/></svg>
+				</div><!-- .number-info-icon -->
+				<span class="number-info-before">+</span>
+				<div class="number-info-animate" data-number="250" data-time="1000"data-delay="2000">0</div>
+				<span class="number-info-after"></span>
+				<span class="number-info-text">Projects completed</span>
+			</div><!-- .number-info -->
+		</div><!-- .numbers-info -->
+
+	</div><!-- .wrap -->
 	
 	<script>
 		function animateNumbersInView() {
-			const animateNumberElements = document.querySelectorAll('.animate-number');
-			
-			animateNumberElements.forEach((element) => {
-				const duration = parseInt(element.getAttribute('data-time'));
-				const end = parseInt(element.getAttribute('data-number'));
-				const start = 0;
-				const range = end - start;
-				const increment = end > start ? 1 : -1;
-				const stepTime = Math.abs(Math.floor(duration / range));
-				
-				let current = start;
-				let timer;
-				
-				const elementInView = () => {
-					const elementTop = element.getBoundingClientRect().top;
-					const delay = parseInt(element.getAttribute('data-delay'));
-					
-					if (elementTop < window.innerHeight) {
-						setTimeout(() => {
-							timer = setInterval(() => {
-								current += increment;
+			const animateNumberElements = document.querySelectorAll('.number-info-animate');
+		
+			const options = {
+				root: null,
+				rootMargin: '0px',
+				threshold: 0.1
+			};
+
+			const observer = new IntersectionObserver((entries, observer) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						const element = entry.target;
+						const duration = parseInt(element.getAttribute('data-time'));
+						const end = parseInt(element.getAttribute('data-number'));
+						const delay = parseInt(element.getAttribute('data-delay'));
+
+						let start = 0;
+						let current = start;
+						let startTime = null;
+
+						const animate = (timestamp) => {
+							if (!startTime) startTime = timestamp;
+							const elapsed = timestamp - startTime;
+
+							if (elapsed >= delay) {
+								const progress = Math.min((elapsed - delay) / duration, 1);
+								const easeOutQuad = progress * (2 - progress); // Ease-out quadratic function
+								current = Math.round(start + (end - start) * easeOutQuad);
 								element.innerHTML = current;
-								if (current == end) {
-									clearInterval(timer);
+
+								if (progress < 1) {
+									requestAnimationFrame(animate);
 								}
-							}, stepTime);
+							} else {
+								requestAnimationFrame(animate);
+							}
+						};
+
+						setTimeout(() => {
+							requestAnimationFrame(animate);
 						}, delay);
-						
-						window.removeEventListener('scroll', elementInView);
+
+						// observer.unobserve(element);
 					}
-				};
-				
-				window.addEventListener('scroll', elementInView);
+				});
+			}, options);
+
+			animateNumberElements.forEach(element => {
+				observer.observe(element);
 			});
 		}
-		
-		animateNumbersInView();
-		
-		
+
+		document.addEventListener('DOMContentLoaded', animateNumbersInView);
 	</script>
+
 </body>
 </html>

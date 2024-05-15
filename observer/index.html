@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Observe Element</title>
+	<style>
+		*, *::before, *::after {
+			box-sizing: border-box;
+		}
+		
+		p {
+			display: block;
+			background: lightblue;
+			padding: 20px;
+			margin: 0 0 20px;
+		}
+		
+		.intro {
+			visibility: hidden;
+			opacity: 0;
+			transform: translateY(-20px) scale(.2,.2);
+			transition: all .8s;
+		}
+		
+		.intro.is-visible {
+			visibility: visible;
+			opacity: 1;
+			transform: translateY(0) scale(1,1);
+		}
+		
+		img {
+			max-width: 100%;
+			display: block;
+			height: auto;
+		}
+		
+		img.img {
+			visibility: hidden;
+			opacity: 0;
+			transform: scale(.2,.2);
+			transition-delay: 500ms;
+			transition: all .8s;
+		}
+		
+		img.img.is-visible {
+			visibility: visible;
+			opacity: 1;
+			transform: scale(1,1);
+		}
+		
+		.container,
+		.cards {
+			max-width: 800px;
+			margin: 20px auto;
+		}
+		
+		.cards {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		
+		.card {
+			width: calc(33.333% - 10px);
+			background-color: rgba(0, 0, 0, .2);
+			min-height: 400px;
+			padding: 20px;
+			transition: all .8s;
+			visibility: hidden;
+			opacity: 0;
+			transform: translateY(-40px);
+		}
+		
+		.card:nth-child(1) { --delay: 1; }
+		.card:nth-child(2) { --delay: 2; }
+		.card:nth-child(3) { --delay: 3; }
+		
+		.card { transition-delay: calc(var(--delay) * 300ms); }
+		
+		.card.is-visible {
+			visibility: visible;
+			opacity: 1;
+			transform: translateY(0);
+		}
+		
+		h1 {
+			text-align: center;
+			opacity: 0;
+			visibility: hidden;
+			transform: scale(.2,.2);
+			transition: all .8s;
+			transition-delay: .3s;
+		}
+		
+		h1.is-visible {
+			opacity: 1;
+			visibility: visible;
+			transform: scale(1,1);
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Observe Element Example</h1>
+	
+	<div class="cards">
+		<div class="card">
+			<p>Card 1</p>
+		</div><!-- .card -->
+		<div class="card">
+			<p>Card 2</p>
+		</div><!-- .card -->
+		<div class="card">
+			<p>Card 3</p>
+		</div><!-- .card -->
+	</div><!-- .cards -->
+	
+	<div class="container">
+		<h1>Super cookies</h1>
+		<img class="img" src="img1.jpg" alt="Image">
+	</div><!-- .container -->
+	
+	<div class="container">
+		<h1 class="intro">Super cookies</h1>
+		<p class="intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quae corporis impedit modi voluptates possimus ipsa ratione est eligendi laudantium mollitia porro blanditiis pariatur velit maxime, culpa facere aspernatur voluptatem? Deserunt odio repellendus nam praesentium atque recusandae quae cupiditate similique perspiciatis aliquam commodi reiciendis possimus dolores sed, iusto aspernatur? Excepturi, similique cum commodi adipisci provident laudantium quisquam facere. Quam, cum fugiat. Natus quae qui quam voluptatum quaerat placeat modi, iusto maiores, quia, tempore corrupti. Nisi veritatis recusandae sequi impedit tempora harum illum deleniti neque sit at in sed et, reprehenderit tempore, provident dolores eos. Aspernatur vero consequuntur nesciunt, culpa distinctio rerum! Praesentium totam nemo dolore laboriosam dolorem repellat distinctio ullam reprehenderit consequuntur qui eius tenetur sequi, saepe repellendus necessitatibus incidunt inventore, expedita eos quasi ipsa sunt, obcaecati alias vero? Iste similique id impedit quis nihil neque sit perspiciatis officia dolorum? Quod consequuntur excepturi voluptatem id iste expedita magni laborum ratione amet repellat nesciunt fugit temporibus, distinctio dignissimos repudiandae recusandae officia earum illum quaerat alias at fugiat natus? Est, harum. Delectus pariatur consectetur voluptatibus veniam laborum corrupti natus sint iusto culpa rerum temporibus consequatur omnis quos velit, et id incidunt esse repudiandae repellendus in harum deserunt facilis deleniti. Quas, aliquid recusandae.</p>
+		<p class="intro">Aspernatur vero consequuntur nesciunt, culpa distinctio rerum! Praesentium totam nemo dolore laboriosam dolorem repellat distinctio ullam reprehenderit consequuntur qui eius tenetur sequi, saepe repellendus necessitatibus incidunt inventore, expedita eos quasi ipsa sunt, obcaecati alias vero? Iste similique id impedit quis nihil neque sit perspiciatis officia dolorum? Quod consequuntur excepturi voluptatem id iste expedita magni laborum ratione amet repellat nesciunt fugit temporibus, distinctio dignissimos repudiandae recusandae officia earum illum quaerat alias at fugiat natus? Est, harum. Delectus pariatur consectetur voluptatibus veniam laborum corrupti natus sint iusto culpa rerum temporibus consequatur omnis quos velit, et id incidunt esse repudiandae repellendus in harum deserunt facilis deleniti. Quas, aliquid recusandae.</p>
+	</div><!-- .container -->
+	
+	<h1>Another set of cards</h1>
+	<div class="cards">
+		<div class="card">
+			<p>Card 1</p>
+		</div><!-- .card -->
+		<div class="card">
+			<p>Card 2</p>
+		</div><!-- .card -->
+		<div class="card">
+			<p>Card 3</p>
+		</div><!-- .card -->
+	</div><!-- .cards -->
+
+	<script>
+
+function observeElement(classToObserve, options = {}, classToAdd = 'is-visible') {
+	const elements = document.querySelectorAll(classToObserve);
+	
+	const defaultOptions = {
+		root: null,
+		rootMargin: '0px',
+		threshold: 0.7
+	};
+	
+	const mergedOptions = { ...defaultOptions, ...options };
+	
+	const observer = new IntersectionObserver(entries => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add(classToAdd);
+			} else {
+				// entry.target.classList.remove(classToAdd);
+			}
+		});
+	}, mergedOptions);
+	
+	elements.forEach(element => observer.observe(element));
+}
+
+observeElement('.card', {
+	root: null,
+	rootMargin: '20px',
+	threshold: 0.5
+}, 'is-visible');
+
+observeElement('.intro');
+observeElement('h1');
+observeElement('.img');
+
+	</script>
+</body>
+</html>
