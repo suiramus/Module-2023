@@ -126,8 +126,12 @@ https://suiramus.github.io/module/afisare-mesaj/
 ---
 
 ### Number animation (JS)
-https://suiramus.github.io/module/number-animation/
 
+Demo: https://suiramus.github.io/module/number-animation/
+
+Code: https://github.com/suiramus/module/tree/mainnumber-animation
+
+![Number animation](/number-animation/number-animation.jpg)
 ---
 
 ### Modal (JS)
